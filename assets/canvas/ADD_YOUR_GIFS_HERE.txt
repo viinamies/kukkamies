@@ -1,0 +1,1 @@
+Place nig2e.gif here to match canvas: "assets/canvas/nig2e.gif" in music.js.
