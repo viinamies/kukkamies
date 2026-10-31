@@ -8,7 +8,7 @@ window.MUSIC_LIBRARY = [
     songs: [
       { title: "SMC LÄHIÖROTAT | Liukuhihna", artist: "SMC HOODRATS", file: "assets/music/SMC LÄHIÖROTAT - Liukuhihna feat. Rohtori Laine, Paula 07 - datatraveller.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHqmG8PoTAKvnCFEmb2BjaujiiGXWyxvhJ1-ZOptbn-g&s=10" },
       { title: "Salmiakkia", artist: "Musta-Lista", file: "assets/music/Salmiakkia - Musta-Lista.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0-Gfq5noGsCtldaHzgDV-knHD44aiXzwyIU08H-E8Q&s=10" },
-      { title: "Kaikesta Huolimatta", artist: "MauriPelaa", file: "assets/music/Kaikest Huolimatta Pt2 (feat. Mc Rambo & Iivo) - snäfä.mp3", cover: "assets/hattulupa.gif" }
+      { title: "Kaikesta Huolimatta", artist: "MauriPelaa", file: "assets/music/Kaikest Huolimatta Pt2 (feat. Mc Rambo & Iivo) - Snäfä.mp3", cover: "assets/hattulupa.gif" }
     ]
   },
   {
