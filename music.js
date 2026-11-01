@@ -44,7 +44,6 @@ window.MUSIC_LIBRARY = [
       { title: "Juppedog - Potterin luuta", artist: "Juppedog", file: "assets/mixed/Juppedog - Potterin Luuta [Bass Boosted] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQelUTsuxO0O7PCj9nVdKtH8H04uEh6sil684KkUn_g&s" },
       { title: "Loyal to the game", artist: "2Pac", file: "assets/mixed/Loyal To The Game - 2Pac.mp3", cover: "https://i.scdn.co/image/ab67616d0000b27378c35340eac7e45824d47830" },
       { title: "Secret Society", artist: "Neoperreo", file: "assets/mixed/Secret Society - Neoperreo feat. ALIC3E (Single 2025) - MELOMAN MUSIC.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfR72dNmqiMQ80_fh_4fORnet59vJKCgN2gV153mHHxQ&s=10" },
-      { title: "Cheri Cheri Lady", artist: "Modern Talking", file: "assets/mixed/Modern Talking - Cheri Cheri Lady (Official Video) - ModernTalkingVEVO.mp3", cover: "https://i.ytimg.com/vi/eNvUS-6PTbs/maxresdefault.jpg" },
     ]
   },
   {
