@@ -37,7 +37,10 @@ window.MUSIC_LIBRARY = [
       { title: "Stereo love", artist: "Edward Maya, Vika Jigulina", file: "assets/mixed/Edward Maya, Vika Jigulina - Stereo love (Radio Edit) (Lyrics) - LyricsZone.mp3", cover: "https://media.tenor.com/6fcgihnem6gAAAAM/pig-looking-meme.gif" }, 
       { title: "Prada", artist: "Unknown", file: "assets/mixed/cassö, RAYE, D-Block Europe - Prada (Lyrics) - 7clouds Rock.mp3", cover: "https://images.genius.com/6e2c7ab24d2339a3b1e1e968706975c9.1000x1000x1.png" },
       { title: "Aikakone - Odota", artist: "KaijaKoo", file: "assets/mixed/Aikakone - Odota [Bass Boosted][60fps] - Volvo Racing.mp3", cover: "https://images.steamusercontent.com/ugc/931551196253772421/208C371B8E73E667B9955B0CB01CB47E49DFF330/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" }, 
-      { title: "Venäläinen ruletti", artist: "Iivo", file: "assets/mixed/Iivo - Venäläistä rulettia [Bass Boosted] - Volvo Racing.mp3", cover: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Nagant-holstered.jpg/250px-Nagant-holstered.jpg?utm_source=fi.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" },
+      { title: "Venäläinen ruletti", artist: "Unknown", file: "assets/mixed/Iivo - Venäläistä rulettia [Bass Boosted] - Volvo Racing.mp3", cover: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Nagant-holstered.jpg/250px-Nagant-holstered.jpg?utm_source=fi.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" },
+      { title: "ikävä lokakuu", artist: "Unknown", file: "assets/mixed/Amispoppia - ikävä lokakuu [Bass Boosted] - Volvo Racing.mp3", cover: "https://i.ytimg.com/vi/lK_jrB8gSQ4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXShIMA8=&rs=AOn4CLDqZIcOK_kgqyKyIqU1AaY6oHvTDg" },
+      { title: "Tässäkö tää oli", artist: "Arttu Wiskari", file: "assets/mixed/Arttu wiskari - Tässäkö Tää Oli [Bass Boosted] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtu-cQ6NIS0rXFDY2r2PipE40Nrd7TM-ITtN1JbdlMVg&s=10" },
+      { title: "Levrone", artist: "Unknown", file: "assets/mixed/Dont Stop The Music Levrone - swelavin.mp3", cover: "https://media.tenor.com/Do_A45lBpQIAAAAM/bass-life-hd-bass-boosted.gif" },
     ]
   },
   {
