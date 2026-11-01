@@ -34,7 +34,7 @@ window.MUSIC_LIBRARY = [
     cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw8ziOOspe07dgV1jcRZrZcVSwt8QF9WvTLUDqQx58Ug&s=10",
     songs: [
       { title: "Burak Yeter - Tuesday", artist: "Danelle Sandoval", file: "assets/mixed/Burak Yeter - Tuesday (Official)ft. Danelle Sandoval - __.mp3", cover: "https://i.ytimg.com/vi/KBjGuEjmPCw/sddefault.jpg" },
-      { title: "Stereo love", artist: "Edward Maya, Vika Jigulina", file: "assets/mixed/Edward Maya, Vika Jigulina - Stereo love (Radio Edit) (Lyrics) - LyricsZone.mp3", cover: "https://media.tenor.com/6fcgihnem6gAAAAM/pig-looking-meme.gif" },
+      { title: "Stereo love", artist: "Edward Maya, Vika Jigulina", file: "assets/mixed/Edward Maya, Vika Jigulina - Stereo love (Radio Edit) (Lyrics) - LyricsZone.mp3", cover: "https://media.tenor.com/6fcgihnem6gAAAAM/pig-looking-meme.gif" }, 
       { title: "Prada", artist: "Unknown", file: "assets/mixed/cassö, RAYE, D-Block Europe - Prada (Lyrics) - 7clouds Rock.mp3", cover: "https://images.genius.com/6e2c7ab24d2339a3b1e1e968706975c9.1000x1000x1.png" },
     ]
   },
