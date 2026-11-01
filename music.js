@@ -8,7 +8,9 @@ window.MUSIC_LIBRARY = [
     songs: [
       { title: "SMC LÄHIÖROTAT | Liukuhihna", artist: "SMC HOODRATS", file: "assets/music/SMC LÄHIÖROTAT - Liukuhihna feat. Rohtori Laine, Paula 07 - datatraveller.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHqmG8PoTAKvnCFEmb2BjaujiiGXWyxvhJ1-ZOptbn-g&s=10" },
       { title: "Salmiakkia", artist: "Musta-Lista", file: "assets/music/Salmiakkia - Musta-Lista.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0-Gfq5noGsCtldaHzgDV-knHD44aiXzwyIU08H-E8Q&s=10" },
-      { title: "Kaikesta Huolimatta", artist: "MauriPelaa", file: "assets/music/Kaikest Huolimatta Pt2 (feat. Mc Rambo & Iivo) - Snäfä.mp3", cover: "assets/hattulupa.gif" }
+      { title: "Kaikesta Huolimatta", artist: "MauriPelaa", file: "assets/music/Kaikest Huolimatta Pt2 (feat. Mc Rambo & Iivo) - snäfä.mp3", cover: "assets/hattulupa.gif" },
+      { title: "Miekkalinna", artist: "Timo Kotipoltto", file: "assets/music/Timo Kotipoltto - Miekkalinna (bass boosted) - Hit-MUSIC.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn79UF6zi0fi04ckNHPr0FAlsYFRpsXqSPLnuyQPPcBg&s=10" },
+      {  title: "Mä muutan mökille norjaan", artist: "Köyhä Jonne", file: "assets/music/Köyhä Jonne - Mä muutan mökille Norjaan (bass boosted) - Hit-MUSIC.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtgXbKOfJ-JDZd3IpD5DjsIS58oHqaVUs6Ki7RFO3Ubz5qmZOXO659mtZSL4uHVWLg7tM7p7ErzEvYkDJIxXyMvZhJ029RH4fu7fgRkBwxcQ&s=10" },
     ]
   },
   {
@@ -23,13 +25,28 @@ window.MUSIC_LIBRARY = [
       { title: "Shanghain Valot", artist: "Annika Eklund", file: "assets/music/Annika Eklund - Shanghain Valot (Wxse remix) [Bass Boosted] - Suomi-Basso.mp3", cover: "https://i.scdn.co/image/ab67616d0000b27315944aab035481723aa0c227" },
       { title: "Gettomasa Johtotähti", artist: "Gettomasa", file: "assets/music/GETTOMASA - Johtotähti (bass boosted) - Suomi-Basso.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8wsqbmqPCACHLf2mZ4__b_Ne-eBQjXQG8Z5d-a2pVRw&s=10" },
       { title: "Gettomasa 500 Hevosta", artist: "Gettomasa", file: "assets/music/GETTOMASA - 500 Hevosta (bass boosted) - Suomi-Basso.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHiEZKdgj4afC-MrYgXdZbn_Ar-fcssNdH36tCZcf-ow&s=10" },
+      { title: "Angels Crying", artist: "Unknown", file: "assets/music/Angels Crying [Bass Boosted] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSelTrqwH1aG3MH1aZztdyHFv3fkul9UL3WbOPPFRjA&s=10" },
+      { title: "Kesäfiilistelyy", artist: "MrPabloFilms", file: "assets/music/Kesäfiilistelyy [Bass Boosted] [60fps] - Volvo Racing.mp3", cover: "https://64.media.tumblr.com/61d1bfb0f35143acca707f1b98022d6b/tumblr_nzox39ERjV1txe8seo1_500.gifv"},
     ]
   },
   {
-    id: "favorites", name: "Favorites", description: "Your top tracks", color: "#b65b83",
-    cover: "",
+    id: "btn", name: "Mixed", description: "Mixed music's", color: "#7855ba",
+    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw8ziOOspe07dgV1jcRZrZcVSwt8QF9WvTLUDqQx58Ug&s=10",
     songs: [
-      { title: "Favorite Song", artist: "Your Artist", file: "assets/music/favorite.mp3", cover: "" }
+      { title: "Burak Yeter - Tuesday", artist: "Danelle Sandoval", file: "assets/mixed/Burak Yeter - Tuesday (Official)ft. Danelle Sandoval - __.mp3", cover: "https://i.ytimg.com/vi/KBjGuEjmPCw/sddefault.jpg" },
+      { title: "Stereo love", artist: "Edward Maya, Vika Jigulina", file: "assets/mixed/Edward Maya, Vika Jigulina - Stereo love (Radio Edit) (Lyrics) - LyricsZone.mp3", cover: "https://media.tenor.com/6fcgihnem6gAAAAM/pig-looking-meme.gif" }, 
+    ]
+  },
+  {
+    id: "favorites", name: "KPC Records", description: "KokoRuokaLista", color: "#b65b83",
+    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnu3ToffiRuRvfyqfaH6LhkKziCqA4vDaX608nUcSJw&s=10",
+    songs: [
+      { title: "Mestari", artist: "Gettomasa & Ruuben", file: "assets/music/Gettomasa & Ruuben - Mestari (audio) - KPC Records.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZNuMGmSZkRXUKYabHCYemy-MHXQkoLppKwrhd2I_3Sg&s=10" },
+      { title: "Yo! (Kotibileet)", artist: "Tohtori Getto", file: "assets/music/Tohtori Getto - Yo! (Kotibileet) - KPC Records.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr3LvUlGWgQoIkIc6RBHMm1humuJn1y9pFLrSSx7ZB2w&s=10" },
+      { title: "Ei sitä kirjoteta hoolla", artist: "Gettomasa & Ruuben", file: "assets/music/Gettomasa & Ruuben - Ei sitä kirjoteta hoolla (audio) - KPC Records.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZNuMGmSZkRXUKYabHCYemy-MHXQkoLppKwrhd2I_3Sg&s=10" },
+      { title: "Vellamo tyylillä", artist: "Gettomasa & Ruuben", file: "assets/music/Gettomasa & Ruuben - Vellamo tyylillä (feat. Joosu J) - KPC Records.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlUxMU4TppZ0_9hyXuDSJKquLnAGDp3xUW9FEskAAMKA&s=10" },
+      { title: "Jäävuorisalaatti", artist: "Gettomasa & Ruuben", file: "assets/music/Gettomasa & Ruuben - Jäävuorisalaatti (feat. Are) (audio) - KPC Records.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZNuMGmSZkRXUKYabHCYemy-MHXQkoLppKwrhd2I_3Sg&s=10" },
+      { title: "Hiljaa hyvä tulee", artist: "Gettomasa & Ruuben", file: "assets/music/Gettomasa & Ruuben - Hiljaa Hyvä Tulee (Feat. Stepa) - KPC Records.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd9lmECeU_8pn7eo-FrffFvyMQh9iaaCkYbHbrDdcMfQ&s=10" },
     ]
   }
 ];
