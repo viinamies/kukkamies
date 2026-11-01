@@ -41,6 +41,8 @@ window.MUSIC_LIBRARY = [
       { title: "ikävä lokakuu", artist: "Unknown", file: "assets/mixed/Amispoppia - ikävä lokakuu [Bass Boosted] - Volvo Racing.mp3", cover: "https://i.ytimg.com/vi/lK_jrB8gSQ4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXShIMA8=&rs=AOn4CLDqZIcOK_kgqyKyIqU1AaY6oHvTDg" },
       { title: "Tässäkö tää oli", artist: "Arttu Wiskari", file: "assets/mixed/Arttu wiskari - Tässäkö Tää Oli [Bass Boosted] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtu-cQ6NIS0rXFDY2r2PipE40Nrd7TM-ITtN1JbdlMVg&s=10" },
       { title: "Levrone", artist: "Unknown", file: "assets/mixed/Dont Stop The Music Levrone - swelavin.mp3", cover: "https://media.tenor.com/Do_A45lBpQIAAAAM/bass-life-hd-bass-boosted.gif" },
+      { title: "Juppedog - Potterin luuta", artist: "Juppedog", file: "assets/mixed/Juppedog - Potterin Luuta [Bass Boosted] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQelUTsuxO0O7PCj9nVdKtH8H04uEh6sil684KkUn_g&s" },
+      { title: "Loyal to the game", artist: "2Pac", file: "assets/mixed/Loyal To The Game - 2Pac.mp3", cover: "https://i.scdn.co/image/ab67616d0000b27378c35340eac7e45824d47830" },
     ]
   },
   {
