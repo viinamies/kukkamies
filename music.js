@@ -36,6 +36,8 @@ window.MUSIC_LIBRARY = [
       { title: "Burak Yeter - Tuesday", artist: "Danelle Sandoval", file: "assets/mixed/Burak Yeter - Tuesday (Official)ft. Danelle Sandoval - __.mp3", cover: "https://i.ytimg.com/vi/KBjGuEjmPCw/sddefault.jpg" },
       { title: "Stereo love", artist: "Edward Maya, Vika Jigulina", file: "assets/mixed/Edward Maya, Vika Jigulina - Stereo love (Radio Edit) (Lyrics) - LyricsZone.mp3", cover: "https://media.tenor.com/6fcgihnem6gAAAAM/pig-looking-meme.gif" }, 
       { title: "Prada", artist: "Unknown", file: "assets/mixed/cassö, RAYE, D-Block Europe - Prada (Lyrics) - 7clouds Rock.mp3", cover: "https://images.genius.com/6e2c7ab24d2339a3b1e1e968706975c9.1000x1000x1.png" },
+      { title: "Aikakone - Odota", artist: "KaijaKoo", file: "assets/mixed/Aikakone - Odota [Bass Boosted][60fps] - Volvo Racing.mp3", cover: "https://images.steamusercontent.com/ugc/931551196253772421/208C371B8E73E667B9955B0CB01CB47E49DFF330/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" }, 
+      { title: "Venäläinen ruletti", artist: "Iivo", file: "assets/mixed/Iivo - Venäläistä rulettia [Bass Boosted] - Volvo Racing.mp3", cover: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Nagant-holstered.jpg/250px-Nagant-holstered.jpg?utm_source=fi.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" },
     ]
   },
   {
