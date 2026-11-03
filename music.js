@@ -16,7 +16,7 @@ window.MUSIC_LIBRARY = [
     songs: [
       { title: "SMC LÄHIÖROTAT | Liukuhihna", artist: "SMC HOODRATS", file: "assets/music/SMC LÄHIÖROTAT - Liukuhihna feat. Rohtori Laine, Paula 07 - datatraveller.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHqmG8PoTAKvnCFEmb2BjaujiiGXWyxvhJ1-ZOptbn-g&s=10" },
       { title: "Salmiakkia", artist: "Musta-Lista", file: "assets/music/Salmiakkia - Musta-Lista.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0-Gfq5noGsCtldaHzgDV-knHD44aiXzwyIU08H-E8Q&s=10" },
-      { title: "Kaikesta Huolimatta", artist: "MauriPelaa", file: "assets/music/Kaikest Huolimatta Pt2 (feat. Mc Rambo & Iivo) - snäfä.mp3", cover: "assets/hattulupa.gif" },
+      //{ title: "Kaikesta Huolimatta", artist: "MauriPelaa", file: "assets/music/Kaikest Huolimatta Pt2 (feat. Mc Rambo & Iivo) - snäfä.mp3", cover: "assets/hattulupa.gif" },
       { title: "Miekkalinna", artist: "Timo Kotipoltto", file: "assets/music/Timo Kotipoltto - Miekkalinna (bass boosted) - Hit-MUSIC.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn79UF6zi0fi04ckNHPr0FAlsYFRpsXqSPLnuyQPPcBg&s=10" },
       {  title: "Mä muutan mökille norjaan", artist: "Köyhä Jonne", file: "assets/music/Köyhä Jonne - Mä muutan mökille Norjaan (bass boosted) - Hit-MUSIC.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtgXbKOfJ-JDZd3IpD5DjsIS58oHqaVUs6Ki7RFO3Ubz5qmZOXO659mtZSL4uHVWLg7tM7p7ErzEvYkDJIxXyMvZhJ029RH4fu7fgRkBwxcQ&s=10" },
     ]
@@ -55,6 +55,7 @@ window.MUSIC_LIBRARY = [
       { title: "Valhallan Viikinki", artist: "Tony Halme", file: "assets/mixed/Tony Halme - Valhallan Viikinki (Musiikkivideo) - paakkelsi.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-J9RaHsn9VoaqWLQlGxqfLphKvhOpw3vf0HjUpeNjJCqQJpHjd4v-rM39q0XeZkpqld8yl3Y6_9Id5uvLplPkyQyBetGm9fnpoJEPRSH5Xg&s=10" },
       { title: "There is a star", artist: "Pharao", file: "assets/mixed/Amispoppia - There Is A Star [Bass Boosted] [60fps] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDV9awMYIMmgRwEwgD1FQoGQUjTERdcBvWogOkg91xJA&s=10" },
       { title: "Amispoppi - Jos sulla on toinen", artist: "Taikapeili", file: "assets/mixed/Amispoppia - Jos Sulla On Toinen (BassMasterRemix) - DJ - Volovo.mp3", cover: "https://i.ytimg.com/vi/8Ej61LmxdPM/mqdefault.jpg" },
+      { title: "Bailando", artist: "Enrique Iglesias", file: "assets/mixed/Amispoppia - Bailando (Bass Boosted) - Amispoppi ♬♪.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmyw061_zJ5aI3cSvX3y0BGbm-E7eNlMavyxntO-IvBA&s=10" },
     ]
   },
   {
