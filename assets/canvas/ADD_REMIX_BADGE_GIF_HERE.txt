@@ -1,0 +1,1 @@
+Add your badge image or GIF here, named remix-badge.gif.\nThe badge catalog already points to assets/canvas/remix-badge.gif.\n
