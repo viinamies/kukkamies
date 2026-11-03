@@ -249,3 +249,7 @@
 .profile-badge-section .badge-option > .badge-unlock-hint {
   padding: 0; white-space: normal; overflow-wrap: break-word;
 }
+
+/* Selected badges appear directly beneath the playlist count on the public profile. */
+.profile-identity .profile-badges-inline{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:7px 0 0;min-height:0}
+.profile-identity .profile-badge{width:34px;height:34px;border-radius:10px}

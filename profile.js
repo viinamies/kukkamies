@@ -11,7 +11,7 @@
   const rewardSongFile = 'assets/music/Kimiz.mp3';
   const rewardVideoFile = 'assets/videos/- Ossi Ketola x Stickyhand Scammer Cow - Kimiz (360p, h264).mp4';
   const remixBadgeMusic = window.REMIX_BADGE_MUSIC;
-  const remixBadgeImage = 'assets/canvas/remix-badge.gif';
+  const remixBadgeImage = 'assets/canvas/remix-badge.png';
 
   let rewardModal = null;
   let rewardCancelled = false;
@@ -45,8 +45,8 @@
     },
     {
       id: 'remix-badge',
-      name: 'Remix Badge',
-      title: 'Watch the badge video with the existing Remix music to unlock',
+      name: 'Kaikki-Punaselle',
+      title: 'Play the complete song to unlock',
       cover: remixBadgeImage,
       mark: '♫',
       price: '8.99€/month',
@@ -237,12 +237,12 @@
         const playMusic = document.createElement('button');
         playMusic.type = 'button';
         playMusic.className = 'badge-free-unlock';
-        playMusic.textContent = 'Unlock badge';
+        playMusic.textContent = 'Play song to unlock';
         playMusic.onclick = () => startFreeUnlock(badge);
         row.append(playMusic);
         const hint = document.createElement('small');
         hint.className = 'badge-unlock-hint';
-        hint.textContent = 'Watch the full badge video with the existing Remix track playing to unlock.';
+        hint.textContent = 'Play the complete Remix song to unlock this badge.';
         row.append(hint);
       }
 
@@ -303,7 +303,7 @@
     document.querySelectorAll('.badge-free-unlock').forEach(button => {
       button.textContent = button.classList.contains('badge-video-unlock')
         ? 'Unlock for free'
-        : 'Play video + Remix music';
+        : 'Play song to unlock';
       button.disabled = false;
     });
   }
@@ -314,9 +314,14 @@
     if (!id || rewardCancelled) return;
 
     const video = rewardModal?.querySelector('video');
+    const remixAudio = id === 'remix-badge' ? el('audio') : null;
 
-    // Only accept completion when the video really reached its end.
-    if (!video || !video.ended) return;
+    // Only accept completion when the full reward media really reaches its end.
+    if (id === 'remix-badge') {
+      if (!remixAudio || !remixAudio.ended) return;
+    } else if (!video || !video.ended) {
+      return;
+    }
 
     window._waveboxRewardBadge = null;
 
@@ -354,7 +359,7 @@
     modal.className = 'reward-video-modal';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', badge.name + ' unlock video');
+    modal.setAttribute('aria-label', badge.name + ' unlock');
 
     // Inline styling makes the video overlay work without extra CSS.
     Object.assign(modal.style, {
@@ -391,7 +396,7 @@
               ${badge.name} unlock
             </strong>
             <span style="display:block;margin-top:5px;opacity:.75;">
-              Watch the full video to unlock your badge${badge.id === 'remix-badge' ? ' · Remix soundtrack' : ''}
+              ${badge.id === 'remix-badge' ? 'Play the full Remix song to unlock your badge' : 'Watch the full video to unlock your badge'}
             </span>
           </div>
 
@@ -415,27 +420,24 @@
           background:black;
           overflow:hidden;
           border-radius:10px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
         ">
-          <video
-            id="ossiRewardVideo"
-            autoplay
-            playsinline
-            preload="auto"
-            disablepictureinpicture
-            controlslist="nodownload noplaybackrate noremoteplayback"
-            oncontextmenu="return false"
-            style="
-              display:block;
-              width:100%;
-              height:100%;
-              object-fit:contain;
-              background:black;
-            ">
-            <source
-              src="${rewardVideoFile}"
-              type="video/mp4">
-            Your browser cannot play this video.
-          </video>
+          ${badge.id === 'remix-badge'
+            ? `<img src="${remixBadgeImage}" alt="Remix Badge artwork" style="display:block;width:100%;height:100%;object-fit:contain;">`
+            : `<video
+                id="ossiRewardVideo"
+                autoplay
+                playsinline
+                preload="auto"
+                disablepictureinpicture
+                controlslist="nodownload noplaybackrate noremoteplayback"
+                oncontextmenu="return false"
+                style="display:block;width:100%;height:100%;object-fit:contain;background:black;">
+                <source src="${rewardVideoFile}" type="video/mp4">
+                Your browser cannot play this video.
+              </video>`}
         </div>
 
         <label style="display:flex;align-items:center;justify-content:center;gap:12px;margin:14px 0 0;color:#fff;font-size:13px;">
@@ -443,7 +445,7 @@
           <input id="rewardMusicVolume" type="range" min="0" max="1" step="0.01" value="0.8" style="width:min(260px,55vw);accent-color:#1ed760;">
         </label>
         <p class="reward-video-note" style="margin:10px 0 0;text-align:center;opacity:.8;">
-          The badge unlocks only when the video finishes.
+          ${badge.id === 'remix-badge' ? 'The badge unlocks only when the full song finishes.' : 'The badge unlocks only when the video finishes.'}
         </p>
       </div>
     `;
@@ -457,7 +459,7 @@
     const button = document.querySelector(`.badge-option[data-badge-id="${badge.id}"] .badge-free-unlock`);
 
     if (button) {
-      button.textContent = 'Video playing…';
+      button.textContent = badge.id === 'remix-badge' ? 'Song playing…' : 'Video playing…';
       button.disabled = true;
     }
 
@@ -465,8 +467,7 @@
     const musicAudio = el('audio');
     const isRemix = badge.id === 'remix-badge';
     if (isRemix) {
-      // Remix uses its own existing music track as the soundtrack; avoid doubling the video's audio.
-      video.muted = true;
+      // Remix uses the existing standalone track; its end event grants the badge.
       startBadgeSoundtrack(badge);
     } else {
       // Ossin Elite's volume control adjusts the audio embedded in its unlock video.
@@ -479,63 +480,74 @@
       const initialVolume = Number(playerVolume?.value ?? musicAudio?.volume ?? 0.8);
       volumeControl.value = String(initialVolume);
       if (isRemix && musicAudio) musicAudio.volume = initialVolume;
-      else video.volume = initialVolume;
+      else if (video) video.volume = initialVolume;
       volumeControl.addEventListener('input', () => {
         const volume = Number(volumeControl.value);
         if (playerVolume) playerVolume.value = volumeControl.value;
-        if (musicAudio) musicAudio.volume = volume;
-        if (!isRemix) video.volume = volume;
+        if (isRemix && musicAudio) musicAudio.volume = volume;
+        else if (video) video.volume = volume;
       });
     }
 
-    // No playback controls are shown.
-    video.controls = false;
-
-    // Prevent ordinary seeking forward or backward.
-    video.addEventListener('seeking', () => {
-      if (rewardCancelled || !rewardModal) return;
-
-      if (Math.abs(video.currentTime - rewardLastTime) > 1.5) {
-        video.currentTime = rewardLastTime;
-      }
-    });
-
-    video.addEventListener('timeupdate', () => {
-      if (!video.seeking) {
-        rewardLastTime = video.currentTime;
-      }
-    });
-
-    video.addEventListener('ended', finishRewardVideo);
-
-    video.addEventListener('error', () => {
-      if (rewardCancelled) return;
-
-      alert(
-        'The unlock video could not be loaded. Check the video filename and format.'
-      );
-
-      closeRewardVideo();
-    });
-
-    video.addEventListener('contextmenu', event => {
-      event.preventDefault();
-    });
-
-    // If autoplay is blocked, let the user click the video to start it.
-    video.play().catch(() => {
-      const note = modal.querySelector('.reward-video-note');
-      if (note) {
-        note.textContent =
-          'Click the video to start playback. Watch it to the end to unlock.';
-      }
-
-      video.addEventListener('click', () => {
-        video.play().catch(() => {
-          alert('Your browser could not play this video.');
+    if (isRemix) {
+      // Do not allow skipping through the Remix song to earn the badge.
+      if (musicAudio) {
+        musicAudio.controls = false;
+        musicAudio.addEventListener('seeking', () => {
+          if (rewardCancelled || !rewardModal) return;
+          if (Math.abs(musicAudio.currentTime - rewardLastTime) > 1.5) {
+            musicAudio.currentTime = rewardLastTime;
+          }
         });
-      }, { once: true });
-    });
+        musicAudio.addEventListener('timeupdate', () => {
+          if (!musicAudio.seeking) rewardLastTime = musicAudio.currentTime;
+        });
+        musicAudio.addEventListener('ended', finishRewardVideo, { once: true });
+        musicAudio.addEventListener('error', () => {
+          if (rewardCancelled) return;
+          alert('The Kaikki-Punaselle song could not be loaded. Check the music file.');
+          closeRewardVideo();
+        }, { once: true });
+      }
+      const note = modal.querySelector('.reward-video-note');
+      if (musicAudio?.paused && note) {
+        note.textContent = 'Tap Play to start the Remix song. Let it finish to unlock.';
+      }
+      // If autoplay was blocked, the site player Play button can start the track.
+    } else {
+      // No playback controls are shown for Ossin Elite.
+      video.controls = false;
+
+      // Prevent ordinary seeking forward or backward.
+      video.addEventListener('seeking', () => {
+        if (rewardCancelled || !rewardModal) return;
+        if (Math.abs(video.currentTime - rewardLastTime) > 1.5) {
+          video.currentTime = rewardLastTime;
+        }
+      });
+
+      video.addEventListener('timeupdate', () => {
+        if (!video.seeking) rewardLastTime = video.currentTime;
+      });
+
+      video.addEventListener('ended', finishRewardVideo);
+
+      video.addEventListener('error', () => {
+        if (rewardCancelled) return;
+        alert('The unlock video could not be loaded. Check the video filename and format.');
+        closeRewardVideo();
+      });
+
+      video.addEventListener('contextmenu', event => event.preventDefault());
+
+      video.play().catch(() => {
+        const note = modal.querySelector('.reward-video-note');
+        if (note) note.textContent = 'Click the video to start playback. Watch it to the end to unlock.';
+        video.addEventListener('click', () => {
+          video.play().catch(() => alert('Your browser could not play this video.'));
+        }, { once: true });
+      });
+    }
   }
 
   function render() {
@@ -744,7 +756,15 @@
       'Reset your profile name, bio and pictures on this device?'
     )) return;
 
-    profile = { ...defaults };
+    // Reset profile details, but keep every badge already unlocked or selected.
+    const completedBadges = [...profile.unlockedBadges];
+    const selectedBadges = [...profile.badges];
+
+    profile = {
+      ...defaults,
+      unlockedBadges: completedBadges,
+      badges: selectedBadges
+    };
     save();
     render();
 

@@ -25,6 +25,9 @@ After deploying, refresh the page (and if needed clear the site's cached data) t
 
 
 ## Remix Badge and reward-video volume
-The Remix Badge track is kept outside the visible playlists. Open My profile, choose **Play badge music**, and let the full track finish to unlock the badge. Add your own badge GIF/image as `assets/canvas/remix-badge.gif`.
+The Remix Badge track is kept outside the visible playlists. Open My profile, choose **Play song to unlock**, and let the full track finish to unlock the badge. The supplied artwork is stored as `assets/canvas/remix-badge.png`.
 
 The Ossin Elite reward video no longer pauses the music. Its overlay includes a Music volume slider so the song volume can be changed on desktop while the video is open.
+
+
+Selected profile badges now appear directly beneath the playlist count in the profile header. The Remix Badge is named **Kaikki-Punaselle**.
