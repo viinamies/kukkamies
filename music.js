@@ -52,8 +52,6 @@ window.MUSIC_LIBRARY = [
       { title: "Juppedog - Potterin luuta", artist: "Juppedog", file: "assets/mixed/Juppedog - Potterin Luuta [Bass Boosted] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQelUTsuxO0O7PCj9nVdKtH8H04uEh6sil684KkUn_g&s" },
       { title: "Loyal to the game", artist: "2Pac", file: "assets/mixed/Loyal To The Game - 2Pac.mp3", cover: "https://i.scdn.co/image/ab67616d0000b27378c35340eac7e45824d47830" },
       { title: "Secret Society", artist: "Neoperreo", file: "assets/mixed/Secret Society - Neoperreo feat. ALIC3E (Single 2025) - MELOMAN MUSIC.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfR72dNmqiMQ80_fh_4fORnet59vJKCgN2gV153mHHxQ&s=10" },
-      { title: "Valhallan Viikinki", artist: "Tony Halme", file: "assets/mixed/Tony Halme - Valhallan Viikinki (Musiikkivideo) - paakkelsi.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-J9RaHsn9VoaqWLQlGxqfLphKvhOpw3vf0HjUpeNjJCqQJpHjd4v-rM39q0XeZkpqld8yl3Y6_9Id5uvLplPkyQyBetGm9fnpoJEPRSH5Xg&s=10" },
-      { title: "There is a star", artist: "Pharao", file: "assets/mixed/Amispoppia - There Is A Star [Bass Boosted] [60fps] - Volvo Racing.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDV9awMYIMmgRwEwgD1FQoGQUjTERdcBvWogOkg91xJA&s=10" },
     ]
   },
   {
