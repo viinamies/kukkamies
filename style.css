@@ -28,3 +28,259 @@ button:focus-visible,input:focus-visible{outline:2px solid #1ed760;outline-offse
   .sheet-controls{display:flex;justify-content:space-around;align-items:center;width:100%;margin-top:36px}.sheet-controls button{background:none;border:0;color:white;font-size:29px;min-width:60px;min-height:60px}.sheet-controls #sheetPlay{border-radius:50%;background:white;color:#101713}
 }
 @media(min-width:721px) and (max-width:1000px){.app{grid-template-columns:205px 1fr}.cards{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+
+/* ===== IMPROVED PHONE RESPONSIVE LAYOUT ===== */
+
+@media (max-width: 720px) {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    padding-bottom: calc(190px + env(safe-area-inset-bottom));
+  }
+
+  .app {
+    display: block;
+    width: 100%;
+    min-height: 100dvh;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: calc(12px + env(safe-area-inset-top)) 14px 5px;
+  }
+
+  .brand {
+    font-size: 23px;
+    margin: 0 0 8px;
+  }
+
+  main {
+    width: 100%;
+    min-width: 0;
+    padding: 18px 14px 35px;
+    overflow-x: hidden;
+  }
+
+  header {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(29px, 8vw, 38px);
+    letter-spacing: -1.5px;
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .playlist-card {
+    min-width: 0;
+    padding: 9px;
+    gap: 7px;
+  }
+
+  .card-art {
+    width: 100%;
+    font-size: 48px;
+  }
+
+  .playlist-card strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .playlist-card span {
+    font-size: 11px;
+  }
+
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .primary {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .track {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 2px;
+    gap: 9px;
+  }
+
+  .track-info {
+    min-width: 0;
+  }
+
+  .track-art {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Compact floating music player */
+
+  .player {
+    position: fixed;
+    left: 7px;
+    right: 7px;
+    bottom: calc(65px + env(safe-area-inset-bottom));
+    width: auto;
+    height: 112px;
+    padding: 8px 10px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px;
+    border-radius: 12px;
+    z-index: 20;
+  }
+
+  .now {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .cover {
+    width: 40px;
+    height: 40px;
+  }
+
+  .song-meta {
+    min-width: 0;
+  }
+
+  .song-meta strong {
+    font-size: 12px;
+  }
+
+  .song-meta span {
+    font-size: 10px;
+  }
+
+  .center {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .controls {
+    gap: clamp(15px, 6vw, 28px);
+  }
+
+  .controls button {
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 18px;
+  }
+
+  .controls .play-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .progress {
+    width: 100%;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .volume {
+    display: none;
+  }
+
+  /* Bottom navigation */
+
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 19;
+    display: flex;
+    justify-content: space-around;
+    padding: 7px 4px calc(7px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-nav button {
+    flex: 1;
+    min-width: 0;
+    padding: 5px 2px;
+    font-size: 19px;
+  }
+
+  .mobile-nav span {
+    font-size: 10px;
+  }
+
+  /* Full-screen player */
+
+  .mobile-sheet:not([hidden]) {
+    overflow-y: auto;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .sheet-art {
+    width: min(76vw, 340px);
+    max-width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .sheet-head {
+    margin-bottom: 3vh;
+  }
+
+  .sheet-controls {
+    margin-top: 24px;
+  }
+}
+
+/* Extra-small phones */
+
+@media (max-width: 380px) {
+  main {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .cards {
+    gap: 8px;
+  }
+
+  .playlist-card {
+    padding: 7px;
+  }
+
+  .controls {
+    gap: 15px;
+  }
+
+  .player {
+    left: 5px;
+    right: 5px;
+  }
+}
