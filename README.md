@@ -22,3 +22,9 @@ Canvas is displayed under YOUR LIBRARY on PC and in the Now Playing sheet on iPh
 To add a GIF, place it in assets/canvas/nig2e.gif and set `canvas: "assets/canvas/nig2e.gif"` on the corresponding song in music.js.
 The uploaded archive did NOT contain nig2e.gif, so you must copy it into assets/canvas.
 After deploying, refresh the page (and if needed clear the site's cached data) to load the updated service worker.
+
+
+## Remix Badge and reward-video volume
+The Remix Badge track is kept outside the visible playlists. Open My profile, choose **Play badge music**, and let the full track finish to unlock the badge. Add your own badge GIF/image as `assets/canvas/remix-badge.gif`.
+
+The Ossin Elite reward video no longer pauses the music. Its overlay includes a Music volume slider so the song volume can be changed on desktop while the video is open.

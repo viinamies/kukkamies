@@ -14,6 +14,17 @@ function renderHome(){window.waveboxHideProfile?.();selected=null;$('pageTitle')
 function openPlaylist(p){window.waveboxHideProfile?.();selected=p;$('pageTitle').textContent=p.name;$('pageSubtitle').textContent=`${p.description||'Your music'} · ${p.songs.length} songs`;$('overview').hidden=true;$('tracksSection').hidden=false;renderTracks();renderNav();}
 function renderTracks(){const root=$('tracks');root.replaceChildren();if(!selected)return;if(!selected.songs.length){root.append(make('p','empty','This playlist is empty. Add songs in music.js.'));return;}selected.songs.forEach((song,i)=>{const row=make('button','track'+(playingList===selected&&index===i?' current':''));const num=make('span','track-num',String(i+1));const art=make('div','track-art');artwork(art,song.cover||selected.cover,selected.color);const info=make('div','track-info');info.append(make('strong','',song.title),make('span','',song.artist||'Unknown artist'));row.append(num,art,info,make('span','track-play','▶'));row.onclick=()=>playTrack(selected,i);root.append(row);});}
 function playTrack(p,i){if(!p||!p.songs.length)return;playingList=p;index=(i+p.songs.length)%p.songs.length;const s=p.songs[index];audio.src=s.file;audio.load();$('songName').textContent=s.title;$('artistName').textContent=s.artist||'Unknown artist';artwork($('cover'),s.cover||p.cover,p.color);audio.play().catch(()=>{$('artistName').textContent='Tap Play or check your music file';});updateMediaSession(s,p);syncSheet();syncLibraryCanvas();window.waveboxRecordPlay?.(p,s);saveState();updatePlayButton();renderTracks();}
+// Play a special badge track without adding it to a visible playlist.
+window.waveboxPlayBadgeMusic = function(track){
+  if(!track?.file)return;
+  playingList=null;index=-1;
+  audio.src=track.file;audio.load();
+  $('songName').textContent=track.title||'Badge music';
+  $('artistName').textContent=track.artist||'Unknown artist';
+  artwork($('cover'),track.cover||'', '#29483c');
+  audio.play().catch(()=>{$('artistName').textContent='Tap Play to start badge music';});
+  updatePlayButton();renderTracks();saveState();
+};
 function updatePlayButton(){syncCanvasPlayback();const label=audio.paused?'▶':'❚❚';$('playPause').textContent=label;$('sheetPlay').textContent=label;if('mediaSession' in navigator)navigator.mediaSession.playbackState=audio.paused?'paused':'playing';}
 function nextSong(manual=false){if(!playingList)return;if(!manual&&repeat===2){audio.currentTime=0;audio.play();return;}let next=shuffle&&playingList.songs.length>1?Math.floor(Math.random()*(playingList.songs.length-1)):index+1;if(shuffle&&playingList.songs.length>1&&next>=index)next++;if(next>=playingList.songs.length){if(repeat===1)next=0;else{audio.pause();audio.currentTime=0;updatePlayButton();return;}}playTrack(playingList,next);}
 function prevSong(){if(!playingList)return;if(audio.currentTime>3){audio.currentTime=0;return;}playTrack(playingList,(index-1+playingList.songs.length)%playingList.songs.length);}
@@ -58,7 +69,7 @@ $('playPause').onclick=()=>{if(!audio.src){const p=selected||library.find(p=>p.s
 $('next').onclick=()=>nextSong(true);$('prev').onclick=prevSong;
 $('shuffle').onclick=()=>{shuffle=!shuffle;$('shuffle').classList.toggle('enabled',shuffle);$('shuffle').setAttribute('aria-pressed',String(shuffle));saveState();};
 $('repeat').onclick=()=>{repeat=(repeat+1)%3;$('repeat').textContent=repeat===2?'↻₁':'↻';$('repeat').classList.toggle('enabled',repeat!==0);$('repeat').title=['Repeat: off','Repeat: playlist','Repeat: one'][repeat];saveState();};
-$('volume').oninput=e=>audio.volume=Number(e.target.value);
+$('volume').oninput=e=>{audio.volume=Number(e.target.value);window.waveboxSetBadgeVolume?.(audio.volume);};
 $('seek').oninput=e=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(e.target.value)/100*audio.duration;};
 audio.ontimeupdate=()=>{$('currentTime').textContent=time(audio.currentTime);$('seek').value=audio.duration?String(audio.currentTime/audio.duration*100):'0';};
 audio.onloadedmetadata=()=>{$('duration').textContent=time(audio.duration);};
