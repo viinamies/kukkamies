@@ -64,7 +64,9 @@ window.MUSIC_LIBRARY = [
     songs: [
       { title: "Valhallan Viikinki", artist: "Tony Halme", file: "assets/mixed/Tony Halme - Valhallan Viikinki (Musiikkivideo) - paakkelsi.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-J9RaHsn9VoaqWLQlGxqfLphKvhOpw3vf0HjUpeNjJCqQJpHjd4v-rM39q0XeZkpqld8yl3Y6_9Id5uvLplPkyQyBetGm9fnpoJEPRSH5Xg&s=10" },
       { title: "Kuningas Voittamaton", artist: "Tony Halme", file: "assets/mixed/Tony Halme - Kuningas Voittamaton - SailorMan69.mp3", cover: "https://i.makeagif.com/media/10-22-2015/xNpKkc.gif" },
-      { title: "Henkipatto", artist: "Irwin Goodman", file: "assets/mixed/Irwin Goodman - Henkipatto - Skorz.mp3", cover: "https://i2.ytimg.com/vi/ekOZe7VzT-c/1.jpg" },
+      { title: "Henkipatto", artist: "Irwin Goodman", file: "assets/mixed/Irwin Goodman - Henkipatto - Skorz.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUPOMeUob5cyJB1_goBJL-xNBuv12uMjcFMFuG46zuQ&s=10" },
+      { title: "Jos sulla on toinen", artist: "Amispoppi", file: "assets/mixed/Amispoppia - Jos Sulla On Toinen (BassMasterRemix) - DJ - Volovo (1).mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ57s__H9e2hlRsdRY6Gjqr-h6WH0RAVKWqbJYNockBl1brZ538lWQhrcmm&s=10" },
+      { title: "Täydellistä", artist: "Amispoppi", file: "assets/mixed/Aurora - Täydelliset [Bass Boosted] - Amispoppia.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ57s__H9e2hlRsdRY6Gjqr-h6WH0RAVKWqbJYNockBl1brZ538lWQhrcmm&s=10" },
     ]
   },
   {
