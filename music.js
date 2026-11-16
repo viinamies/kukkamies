@@ -59,6 +59,15 @@ window.MUSIC_LIBRARY = [
     ]
   },
   {
+    id: "btn2", name: "Suomi Mixed", description: "Suomi Hitit", color: "#7855ba",
+    cover: "https://cdn.pixabay.com/animation/2022/08/14/03/55/03-55-58-496_512.gif",
+    songs: [
+      { title: "Valhallan Viikinki", artist: "Tony Halme", file: "assets/mixed/Tony Halme - Valhallan Viikinki (Musiikkivideo) - paakkelsi.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-J9RaHsn9VoaqWLQlGxqfLphKvhOpw3vf0HjUpeNjJCqQJpHjd4v-rM39q0XeZkpqld8yl3Y6_9Id5uvLplPkyQyBetGm9fnpoJEPRSH5Xg&s=10" },
+      { title: "Kuningas Voittamaton", artist: "Tony Halme", file: "assets/mixed/Tony Halme - Kuningas Voittamaton - SailorMan69.mp3", cover: "https://i.makeagif.com/media/10-22-2015/xNpKkc.gif" },
+      { title: "Henkipatto", artist: "Irwin Goodman", file: "assets/mixed/Irwin Goodman - Henkipatto - Skorz.mp3", cover: "https://i2.ytimg.com/vi/ekOZe7VzT-c/1.jpg" },
+    ]
+  },
+  {
     id: "favorites", name: "KPC Records", description: "KokoRuokaLista", color: "#b65b83",
     cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnu3ToffiRuRvfyqfaH6LhkKziCqA4vDaX608nUcSJw&s=10",
     songs: [
