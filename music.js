@@ -67,6 +67,8 @@ window.MUSIC_LIBRARY = [
       { title: "Henkipatto", artist: "Irwin Goodman", file: "assets/mixed/Irwin Goodman - Henkipatto - Skorz.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUPOMeUob5cyJB1_goBJL-xNBuv12uMjcFMFuG46zuQ&s=10" },
       { title: "Jos sulla on toinen", artist: "Amispoppi", file: "assets/mixed/Amispoppia - Jos Sulla On Toinen (BassMasterRemix) - DJ - Volovo (1).mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ57s__H9e2hlRsdRY6Gjqr-h6WH0RAVKWqbJYNockBl1brZ538lWQhrcmm&s=10" },
       { title: "Täydellistä", artist: "Amispoppi", file: "assets/mixed/Aurora - Täydelliset [Bass Boosted] - Amispoppia.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ57s__H9e2hlRsdRY6Gjqr-h6WH0RAVKWqbJYNockBl1brZ538lWQhrcmm&s=10" },
+      { title: "Romeo ja Julia (Extreme BassBoosted)", artist: "Amispoppi", file: "assets/mixed/Amispoppia - Romeo ja Julia (extreme Bass boosted) - SuomiBassBoost.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYNMQK0CGiQDyK29V-nD3XGFFGvTNur5hFOhGEKeUdw&s=10" },
+      { title: "Ikävä lokakuu (Extreme BassBoosted)", artist: "Amispoppi", file: "assets/mixed/Amispoppia - Ikävä lokakuu (bass boosted) - SuomiBassBoost.mp3", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYNMQK0CGiQDyK29V-nD3XGFFGvTNur5hFOhGEKeUdw&s=10" },
     ]
   },
   {
